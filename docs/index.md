@@ -34,8 +34,8 @@ $extension = new TalesFromADev\Twig\Extra\Tailwind\TailwindExtension();
 
 $twig = new \Twig\Environment($loader);
 
-$twig->addRuntimeLoader(new FactoryRuntimeLoader([
-    TailwindRuntime::class => function () { return new TailwindRuntime; },
+$twig->addRuntimeLoader(new Twig\RuntimeLoader\FactoryRuntimeLoader([
+    TalesFromADev\Twig\Extra\Tailwind\TailwindRuntime::class => function () { return new TalesFromADev\Twig\Extra\Tailwind\TailwindRuntime; },
 ]));
 
 $twig->addExtension($extension);
